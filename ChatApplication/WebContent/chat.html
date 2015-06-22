@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Chat Application</title>
+
+<link rel="stylesheet" type="text/css" href="css/chat.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<script src="js/chat.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body onload="loadchat()">
+	<table id="chatTable" border="1" class="table table-striped">
+		<thead>
+			<tr>
+				<th class="text-center" style="width: 100px;">History</th>
+				<th colspan="3" id="heading" class="text-center">Welcome to My
+					Chat!</th>
+			</tr>
+		</thead>
+		<tr>
+			<td rowspan="3"><div id="history"></div></td>
+			<td colspan="3">
+				<div id="content">"Your chat will appear here. Select a chat
+					from the history."</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><textarea class="form-control" rows="3"
+					cols="50" id="text" placeholder="Type your message here."
+					onkeypress="return handleKeyPress(event)"></textarea></td>
+			<td><input type="button" class="btn btn-info btn-lg" id="send"
+				value="Send" onclick="handleSend()"></input></td>
+		</tr>
+	</table>
+</body>
+</html>
